@@ -24,9 +24,9 @@ class Contador extends React.Component {
     render(){
         return(
             <div style={{display: "flex"}}>
-                <button onClick={this.anterior} style={{margin: "20px"}}>Anterior</button>
+                <button onClick={this.anterior} style={{margin: "20px"}} disabled={this.state.contador === 0}>Anterior</button>
                 <h3 style={{margin: "20px"}}>{this.state.contador}</h3>
-                <button onClick={this.posterior} style={{margin: "20px"}}>Posterior</button>
+                <button onClick={this.posterior} style={{margin: "20px"}} disabled={this.state.contador === 10}>Posterior</button>
             </div>
         )
     }
